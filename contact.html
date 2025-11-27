@@ -129,13 +129,23 @@
        <h1 style="font-weight: bolder; margin-top: 20px;"> Contact Us </h1>
        <p style="font-size:1.2rem; margin-bottom:1.5rem;">Have a question or need assistance? WatchZone is always ready to support you. Reach out anytime — we respond fast and are committed to giving you the help you need.</p>
 
-                <!-- Bottom navigation -->
-                <nav class="bottom-nav" style="position:fixed;left:0;right:0;bottom:0;background:#111;color:#fff;display:flex;justify-content:space-around;padding:10px 0;z-index:1000;">
-                    <a href="index.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🏠</span>Home</a>
-                    <a href="shop.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🛍️</span>Shop</a>
-                    <a href="cart.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🛒</span>Cart</a>
-                    <a href="delivery.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🚚</span>Delivery</a>
-                    <a href="contact.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">📞</span>Contact</a>
+                <!-- Bottom navigation (mobile only) -->
+                <style>
+                    .bottom-nav{position:fixed;left:0;right:0;bottom:0;background:#111;color:#fff;display:flex;justify-content:space-around;padding:10px 0;z-index:1000}
+                    .bottom-nav a{color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem}
+                    @media (min-width:768px){
+                        .bottom-nav{display:none !important}
+                    }
+                    @media (max-width:767px){
+                        .bottom-nav{display:flex}
+                    }
+                </style>
+                <nav class="bottom-nav">
+                    <a href="index.html"><span style="font-size:1.1rem">🏠</span><span>Home</span></a>
+                    <a href="shop.html"><span style="font-size:1.1rem">🛍️</span><span>Shop</span></a>
+                    <a href="cart.html"><span style="font-size:1.1rem">🛒</span><span>Cart</span></a>
+                    <a href="delivery.html"><span style="font-size:1.1rem">🚚</span><span>Delivery</span></a>
+                    <a href="contact.html"><span style="font-size:1.1rem">📞</span><span>Contact</span></a>
                 </nav>
         
 </div>
