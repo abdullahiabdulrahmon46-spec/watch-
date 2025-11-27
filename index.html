@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+</head>
+<body>
+<header>
+    <nav class="navbar" style="display:flex; justify-content:flex-start; align-items:center; gap:1.5rem; padding:1rem; width:100%;">
+        <div class="logo" style="font-weight:700;">⌚ Watch<span>Zone</span></div>
+
+        <ul class="nav-links" style="list-style:none; display:flex; gap:1rem; margin:0; padding:0; font-size:large;">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="delivery.html">Delivery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions" style="margin-left:auto; display:flex; gap:1rem; align-items:center;">
+            <a href="cart.html" class="cart position-relative" aria-label="Shopping cart" style="font-size:1rem; color:#fff; background:#000; padding:8px 12px; border-radius:6px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,0.15); box-shadow:0 4px 10px rgba(0,0,0,0.12); z-index:1000;">
+              🛒 <span style="font-weight:700;">Cart</span>
+              <span id="cartCount" class="badge bg-danger position-absolute top-0 start-100 translate-middle" style="font-size:0.9rem;">0</span>
+            </a>
+           
+        </div>
+    </nav>
+</header>
+
+  
+  <div class="banner" style="text-align: center; background-color: gold; padding: 60px;">
+    
+    <div class="banner-content">
+      <h1 style="font-size: 3rem; font-weight: bolder;">Discover Timeless Elegance</h1>
+      <p style="font-size: larger; ">Explore our exclusive collection of luxury watches.</p>
+     
+      <a href="shop.html" ><button type="button"   class="btn btn-outline-dark">Shop Here</button></a> 
+
+    </div>
+    </div>
+  <div class="content"style="text-align: center; margin-top: 50px;" >
+    <h1 style="font-size: xxxxx-large; font-weight: bolder;">Welcome to WatchZone</h1>
+    <b style="font-size: large; ">Your ultimate destination for premium watches.</b>
+    </div>
+    
+
+            </div>
+          </div>
+    </div>
+              <!-- Bottom navigation -->
+              <nav class="bottom-nav" style="position:fixed;left:0;right:0;bottom:0;background:#111;color:#fff;display:flex;justify-content:space-around;padding:10px 0;z-index:1000;">
+                <a href="index.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🏠</span>Home</a>
+                <a href="shop.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🛍️</span>Shop</a>
+                <a href="cart.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🛒</span>Cart</a>
+                <a href="delivery.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🚚</span>Delivery</a>
+                <a href="contact.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">📞</span>Contact</a>
+              </nav>
+
+    <!-- Three-card section: fits screen, responsive -->
+    <div class="container my-5">
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="card w-100 shadow-sm">
+            <img src="images/rolex.jpg" class="card-img-top" alt="Classic Wrist Watch" style="height:220px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title"> Rolex Watch</h5>
+              <p class="card-text text-muted small">Stainless steel, water-resistant</p>
+              <div class="text-primary fw-bold mb-2">₦70,000</div>
+              <div class="d-flex gap-2">
+          <a href="cart.html"
+              class="btn btn-sm btn-primary rounded-pill d-inline-flex align-items-center gap-2 shadow-sm"
+              role="button" aria-label="Add Classic Wrist Watch to cart"
+             style="padding:0.28rem 0.9rem; font-weight:600; box-shadow:0 2px 6px rgba(0,0,0,0.12); background-color: #000; border: none; ">
+              
+            🛒 <span class="d-none d-sm-inline">Add to Cart</span>
+          </a>
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#quickPreviewModal" data-title="Classic Wrist Watch" data-price="₦50,000" data-desc="Stainless steel, water-resistant" data-img="images/rolex.jpg">Quick Preview</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="card w-100 shadow-sm">
+            <img src="images/luxury.jpg" class="card-img-top" alt="Modern Wrist Watch" style="height:220px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title">Modern Wrist Watch</h5>
+              <p class="card-text text-muted small">Leather strap, elegant dial</p>
+              <div class="text-primary fw-bold mb-2">₦45,000</div>
+              <div class="d-flex gap-2">
+          <a href="cart.html"
+             class="btn btn-sm btn-primary rounded-pill d-inline-flex align-items-center gap-2 shadow-sm"
+             role="button" aria-label="Add Modern Wrist Watch to cart"
+             style="padding:0.28rem 0.9rem; font-weight:600; box-shadow:0 2px 6px rgba(0,0,0,0.12); background-color: #000; border: none; ">
+            🛒 <span class="d-none d-sm-inline">Add to Cart</span>
+          </a>
+          <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#quickPreviewModal" data-title="Modern Wrist Watch" data-price="₦45,000" data-desc="Leather strap, elegant dial" data-img="images/luxury.jpg">Quick Preview</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-sm-6 col-md-4 d-flex">
+          <div class="card w-100 shadow-sm">
+            <img src="images/amazon.jpg" class="card-img-top" alt="Sport Wrist Watch" style="height:220px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title"> Amazon watches</h5>
+                <p class="card-text text-muted small">Lightweight, comfortable strap</p>
+                <div class="text-primary fw-bold mb-2">₦30,000</div>
+                <div class="d-flex gap-2 align-items-center">
+                <a href="cart.html"
+                   class="btn btn-sm btn-primary rounded-pill d-inline-flex align-items-center gap-2 shadow-sm"
+                   role="button" aria-label="Add Sport Wrist Watch to cart"
+                   style="padding:0.28rem 0.9rem; font-weight:600; box-shadow:0 2px 6px rgba(0,0,0,0.12); background-color: #000; border: none; ">
+                  🛒 <span class="d-none d-sm-inline">Add to Cart</span>
+                </a>
+                <button type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#quickPreviewModal"
+                    data-title="Sport Wrist Watch"
+                    data-price="₦30,000"
+                    data-desc="Lightweight, comfortable strap"
+                    data-img="images/amazon.jpg">
+                  Quick Preview
+                </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Quick Preview Modal -->
+    <div class="modal fade" id="quickPreviewModal" tabindex="-1" aria-labelledby="quickPreviewLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="quickPreviewLabel">Product Preview</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <img id="previewImage" src="" alt="Preview" class="img-fluid">
+              </div>
+              <div class="col-md-6">
+                <h5 id="previewTitle"></h5>
+                <p id="previewDesc" class="text-muted small"></p>
+                <div id="previewPrice" class="text-primary fw-bold mb-3"></div>
+                <a href="cart.html" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <video id="promoVideo" src="wirst add.mp4" style="width:100%; height:500px; object-fit:cover;" autoplay muted playsinline></video>
+    <script>
+    (function(){
+      const v = document.getElementById('promoVideo');
+      const MAX_LENGTH = 86; // seconds to play
+
+      // Try to autoplay (some browsers require user gesture)
+      function tryPlay(){ v.play().catch(()=>{}); }
+
+      v.addEventListener('loadedmetadata', tryPlay);
+
+      // Loop only the first MAX_LENGTH seconds
+      v.addEventListener('timeupdate', () => {
+        if (v.currentTime >= MAX_LENGTH) {
+          v.currentTime = 0;
+          v.play();
+        }
+      });
+
+      // Disable context menu on the video
+      v.addEventListener('contextmenu', e => e.preventDefault());
+
+      // Block common keyboard pause/play shortcuts (space, k, media keys)
+      document.addEventListener('keydown', function(e){
+        const blockedKeys = [' ', 'Spacebar', 'k'];
+        if(blockedKeys.includes(e.key) || e.code === 'Space') {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, {capture:true, passive:false});
+
+      // Also block clicks from toggling (in case some UA toggles play on click)
+      v.addEventListener('click', (e) => { e.preventDefault(); tryPlay(); });
+    })();
+    </script>
+    <div class="content" style="text-align: center; margin-top: 30px; background: linear-gradient(180deg,#000 0%, #0a0a0a 100%); padding: 60px 20px; border-radius: px; color: #fff; box-shadow: inset 0 2px 6px rgba(255,255,255,0.02), 0 8px 24px rgba(0,0,0,0.6);">
+    <h1 style="font-size: xxxxx-large; font-weight: bolder;">Why Choose WatchZone?</h1>
+    <p style="font-size: large; ">At WatchZone, we offer a curated selection of premium watches that combine timeless design with modern functionality. Our commitment to quality, customer satisfaction, and competitive pricing makes us the preferred choice for watch enthusiasts worldwide.</p>
+   
+    <p style="font-size: large;"> 
+      <p> Extensive Collection: We feature a wide range of watches from renowned brands, ensuring that you find the perfect timepiece to match your style and needs.</p>
+      <p> Quality Assurance: Each watch in our collection undergoes rigorous quality checks to guarantee authenticity and durability.</p>
+      <p> Competitive Pricing: We offer attractive prices and regular promotions, making luxury watches accessible to a broader audience.</p>
+      <p> Excellent Customer Service: Our dedicated support team is always ready to assist you with any inquiries or concerns, ensuring a seamless shopping experience.</p>
+      <p> Fast and Reliable Shipping: We prioritize prompt delivery, ensuring that your order reaches you in perfect condition and on time.</p>
+
+    </p>
+
+     </div>
+    <div class="container my-5">
+     <div class="row g-4 align-items-center">
+       <div class="col-md-6">
+      <img src="images/delivery man.jpg" alt="Watch Collection" class="img-fluid" style="max-height:500px; width:100%; object-fit:cover; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+       </div>
+
+        <div class="col-md-6">
+          <h2 style="font-size: xx-large; font-weight: bolder;">
+          Our Delivery Options
+          </h2>
+          <p style="font-size: large; color: #000000;">We offer a variety of delivery options to ensure your watch arrives safely and promptly. Choose from standard shipping, expedited delivery, or same-day service in select areas. Enjoy real-time tracking and reliable customer support throughout the delivery process.</p>
+          <p> </p>
+
+          <a href="collections.html" class="btn btn-dark" style="padding: 10px 20px; font-size: large; font-weight: 600; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">Explore Delivery Options</a>
+     </div>
+     </div>
+     </div>
+    </div>
+    <footer style="background-color: #000000; padding: 20px; text-align: center; margin-top: 40px;">
+      <p style="margin: 0; font-size: small; font-size: large; color:white;">&copy; 2025 WatchZone. All rights reserved.</p>
+    
+
+
+
+   
+
+    <!-- Bootstrap JS (local) and modal population script -->
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Populate quick preview modal with data from button
+      var quickModal = document.getElementById('quickPreviewModal');
+      quickModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget; // Button that triggered the modal
+        var title = button.getAttribute('data-title');
+        var price = button.getAttribute('data-price');
+        var desc = button.getAttribute('data-desc');
+        var img = button.getAttribute('data-img');
+
+        document.getElementById('previewTitle').textContent = title || '';
+        document.getElementById('previewPrice').textContent = price || '';
+        document.getElementById('previewDesc').textContent = desc || '';
+        var previewImage = document.getElementById('previewImage');
+        previewImage.src = img || '';
+        previewImage.alt = title || 'Preview image';
+      });
+
+      // Add to Cart functionality for all product cards
+      document.querySelectorAll('.card .btn-primary').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          if (btn.getAttribute('href') === 'cart.html') {
+            e.preventDefault();
+            var card = btn.closest('.card');
+            var name = card.querySelector('.card-title').textContent.trim() || 'Product';
+            var priceText = card.querySelector('.text-primary').textContent.replace(/[^\d]/g, '');
+            var price = parseInt(priceText) || 0;
+            var desc = card.querySelector('.card-text').textContent.trim();
+            var img = card.querySelector('img').getAttribute('src');
+            var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+            // Check if already in cart
+            var found = cart.find(item => item.name === name && item.price === price && item.img === img);
+            if (found) {
+              found.qty += 1;
+            } else {
+              cart.push({ name, price, desc, img, qty: 1 });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            window.location.href = 'cart.html';
+          }
+        });
+      });
+
+      // Show cart item count in navbar
+      function updateCartCount() {
+        var cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        var count = cart.reduce(function(sum, item) { return sum + item.qty; }, 0);
+        var badge = document.getElementById('cartCount');
+        if (badge) badge.textContent = count;
+      }
+      updateCartCount();
+    </script>
+    </footer>
+  </body>
+</html>

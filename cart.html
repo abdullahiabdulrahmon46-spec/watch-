@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Montserrat', Arial, sans-serif;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 800px;
+      margin-top: 48px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      padding: 32px 24px 24px 24px;
+    }
+    .cart-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #222;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .list-group-item {
+      background: #f6f8fa;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      border: none;
+      padding: 18px 16px;
+    }
+    .product-img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border: 1px solid #e3e6ed;
+    }
+    .cart-actions {
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg,#1e293b 0%, #3b82f6 100%);  
+      border: none;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .btn-danger {
+      background: linear-gradient(90deg,#ef4444 0%, #f87171 100%);
+      border: none;
+      font-weight: 600;
+    }
+    .btn-outline-secondary {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: 1.5px solid #cbd5e1;
+      color: #222;
+      background: #fff;
+      transition: background 0.2s;
+    }
+    .btn-outline-secondary:hover {
+      background: #e3e6ed;
+    }
+    .cart-total {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 1.2rem;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="mb-4">Your Shopping Cart</h2>
+    <ul id="cartList" class="list-group mb-4"></ul>
+    <div id="cartTotal" class="fw-bold fs-5 mb-3"></div>
+    <div class="d-flex gap-2 mb-3">
+      <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+      <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+      <a href="checkout.html" class="btn btn-success">Checkout</a>
+    </div>
+  </div>
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function getCart() {
+      return JSON.parse(localStorage.getItem('cart') || '[]');
+    }
+    function saveCart(cart) {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    function renderCart() {
+      const list = document.getElementById('cartList');
+      const totalDiv = document.getElementById('cartTotal');
+      list.innerHTML = '';
+      let total = 0;
+      const cart = getCart();
+      if (cart.length === 0) {
+        list.innerHTML = '<li class="list-group-item">Your cart is empty.</li>';
+        totalDiv.textContent = '';
+        return;
+      }
+      cart.forEach((item, idx) => {
+        total += item.price * item.qty;
+        const priceFormatted = item.price.toLocaleString();
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex align-items-center justify-content-between';
+        li.innerHTML = `
+          <div class="d-flex align-items-center gap-3">
+            <img src="${item.img}" class="product-img" alt="${item.name}">
+            <div>
+              <strong>${item.name}</strong><br>
+              <span class="text-primary">₦${priceFormatted}</span><br>
+              <span class="text-muted small">${item.desc}</span><br>
+              <div class="d-flex align-items-center gap-2 mt-1">
+                <button class="btn btn-sm btn-outline-secondary" onclick="decreaseQty(${idx})">-</button>
+                <span>Qty: ${item.qty}</span>
+                <button class="btn btn-sm btn-outline-secondary" onclick="increaseQty(${idx})">+</button>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-danger btn-sm" onclick="removeFromCart(${idx})">Remove</button>
+        `;
+        list.appendChild(li);
+      });
+      totalDiv.textContent = 'Total: ₦' + total.toLocaleString();
+    }
+    function removeFromCart(idx) {
+      const cart = getCart();
+      cart.splice(idx, 1);
+      saveCart(cart);
+      renderCart();
+    }
+    function clearCart() {
+      localStorage.removeItem('cart');
+      renderCart();
+    }
+    function increaseQty(idx) {
+      const cart = getCart();
+      cart[idx].qty += 1;
+      saveCart(cart);
+      renderCart();
+    }
+    function decreaseQty(idx) {
+      const cart = getCart();
+      if (cart[idx].qty > 1) {
+        cart[idx].qty -= 1;
+        saveCart(cart);
+        renderCart();
+      }
+    }
+    renderCart();
+  </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Delivery - WatchZone</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<!-- FONT AWESOME ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Font Awesome Offline -->
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Montserrat', ;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url(images/delivery\ 2.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    z-index: -1;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background: gold;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    color: black;
+    font-family: montserrat;
+    
+  }
+
+  h1 {
+    font-family: montserrat;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    color: #f9c74f;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: #f9c74f;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #e0d68f;
+  }
+
+  .delivery-option {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .delivery-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+  }
+
+  .delivery-option span {
+    font-weight: 700;
+    color: #f9c74f;
+  }
+
+  .contact {
+    margin-top: 30px;
+    padding: 20px;
+    background: #222;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  }
+
+  .contact a {
+    color: #f9c74f;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    .container {
+      padding: 25px;
+      margin: 20px;
+    }
+    h1 {
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+      <nav class="navbar" style="display:flex;justify-content:flex-start; align-items:center; gap:1.5rem; padding:1rem; width:100%; background: #000; color: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.07); margin-bottom: 40px;">
+                <div class="logo" style="font-weight:700;">⌚ Watch<span>Zone</span></div>
+
+                <ul class="nav-links" style="list-style:none; display:flex; gap:1rem; margin:0; padding:0; font-size:large;">
+                        <li><a href="index.html" style="font-weight: bold;" class="active">Home</a></li>
+                        <li><a href="shop.html" style="font-weight: bold;">Shop</a></li>
+                        <li><a href="delivery.html" style="font-weight: bold;">Delivery</a></li>
+                        <li><a href="about.html" style="font-weight: bold;">About</a></li>
+                        <li><a href="contact.html" style="font-weight: bold;">Contact</a></li>
+                </ul>
+
+                </div>
+        </nav>
+</header>
+   
+<div class="container" >
+  <h1 style="color: #0a0a0a;">Delivery Information</h1>
+
+  <p style="color: #0a0a0a;">At <strong>WatchZone</strong>, we provide a premium delivery service to ensure your luxury watch arrives safely and on time. Each package is carefully prepared to maintain the quality and elegance you deserve.</p>
+
+  <div class="delivery-option" style="color: #0a0a0a;">
+    <h2>Standard Delivery</h2>
+    <p><span>Fee:</span> ₦1,000</p>
+    <p><span>Timeline:</span> 3–5 business days within Nigeria</p>
+  </div>
+
+  <div class="delivery-option">
+    <h2>Express Delivery</h2>
+    <p><span>Fee:</span> ₦2,500</p>
+    <p><span>Timeline:</span> 1–2 business days within Nigeria</p>
+  </div>
+
+  <div class="delivery-option" style="color: #0a0a0a;">
+    <h2>Same Day Delivery</h2>
+    <p><span>Fee:</span> ₦5,000</p>
+    <p><span>Timeline:</span> Same day delivery in selected cities</p>
+  </div>
+
+  <p style="color: #0a0a0a;">Every order is carefully packaged to prevent scratches or damage. Once your watch is shipped, you will receive a tracking link to monitor your delivery in real time.</p>
+
+  <div class="contact">
+    <p>For any questions about your delivery, reach out to us:</p>
+    
+    <p><a href="https://wa.me/2348149377559" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i> 08149377559
+</a></p>
+  </div>
+</div>
+
+</body>
+</html>
+
+<!-- Bottom navigation -->
+<nav class="bottom-nav" style="position:fixed;left:0;right:0;bottom:0;background:#111;color:#fff;display:flex;justify-content:space-around;padding:10px 0;z-index:1000;">
+  <a href="index.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🏠</span>Home</a>
+  <a href="shop.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🛍️</span>Shop</a>
+  <a href="cart.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🛒</span>Cart</a>
+  <a href="delivery.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">🚚</span>Delivery</a>
+  <a href="contact.html" style="color:#fff;text-decoration:none;font-weight:600;display:flex;flex-direction:column;align-items:center;font-size:0.9rem;"><span style="font-size:1.1rem">📞</span>Contact</a>
+</nav>
